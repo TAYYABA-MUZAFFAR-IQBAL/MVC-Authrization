@@ -30,10 +30,10 @@ const mustBeLoggedIn = async (req, res, next) => {
       console.log("Req===>", req.apiUser);
       console.log( userbyemail[0].role);
       if (req.apiUser && (userbyemail[0].role === "Admin")) {
-        console.log("Welcome Admin!! data extraxted successfully");
+        console.log("Welcome Admin!!");
         next();
       } else {
-        console.log("you have no access to all data");
+        console.log("you Are Not Admin...");
         return res.status(403).json({
           status: false,
           message: "No access",
