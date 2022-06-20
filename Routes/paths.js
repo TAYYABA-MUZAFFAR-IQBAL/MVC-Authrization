@@ -5,7 +5,7 @@ const express = require("express");
 // const FuncController = require("../Controllers/FunctionalController");
 const mustBeLoggedIn = require("../Middleware/MustBeLoginMiddleware");
 const router = express.Router();
-const controllers=require("../Controllers/FunctionalController")
+const controllers=require("../Controllers/ClassControllerApproch")
 
 router.route("/Signup").post(controllers.test.registerEmployee);
 router.route("/Login").post(controllers.test.LoginEmployee);
